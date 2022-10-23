@@ -1,12 +1,11 @@
 import DarkModeToggleButton from "./components/DarkModeToggleButton";
 import SearchBar from "./components/SearchBar";
-
+const categoryLink = [
+  ["패션", "/fation"],
+  ["악세서리", "/accessory"],
+  ["디지털", "/digital"],
+];
 const Header = () => {
-  const categoryLink = [
-    ["패션", "/fation"],
-    ["악세서리", "/accessory"],
-    ["디지털", "/digital"],
-  ];
   return (
     <>
       <div className="fixed z-10 w-full navbar shadow-lg bg-white dark:bg-neutral text-neutral-content">
