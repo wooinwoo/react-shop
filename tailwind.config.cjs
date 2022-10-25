@@ -10,7 +10,9 @@ module.exports = {
       xl: "1280px",
       xl2: "1360px",
     },
-    extend: {},
+    extend: {
+      maxHeight: {},
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
