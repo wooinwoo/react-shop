@@ -1,25 +1,25 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import GetProductList from "./api/GetProductList";
 import Header from "./Header";
+import Main from "./pages/Main";
 import Footer from "./Footer";
 
 function App() {
+  GetProductList();
   return (
     <>
-      <Header />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Header />
-        <Routes></Routes>
-      </BrowserRouter> */}
-      <Footer />
+        <section className="pt-16">
+          <Routes>
+            <Route path="/" element={<Main />} />
+          </Routes>
+        </section>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }
 
 export default App;
-
-{
-  /* <Route path="/" element={<WordCloudPage />} />
-          <Route path="/main" element={<WordCloudPage />} />
-          <Route path="/compare" element={<ComparedWordCloudPage />} />
-          <Route path="/bills" element={<Bills />} /> */
-}
