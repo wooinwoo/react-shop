@@ -2,24 +2,37 @@ import { atom, selector } from "recoil";
 
 export const productListState = atom({
   key: "productList",
-  default: [],
+  default: [
+    {
+      id: 0,
+      category: "",
+      description: "",
+      image: "",
+      price: 0,
+      rating: {
+        rate: 0,
+        count: 0,
+      },
+      title: "",
+    },
+  ],
 });
 
-const clothingProductList = selector({
+export const clothingProductList = selector({
   key: "clothingProductList", // unique ID (with respect to other atoms/selectors)
   get: ({ get }) => {
     const dataList = get(productListState);
     return dataList.filter((item) => item.category.includes("clothing"));
   },
 });
-const jeweleryProductList = selector({
+export const jeweleryProductList = selector({
   key: "jeweleryProductList", // unique ID (with respect to other atoms/selectors)
   get: ({ get }) => {
     const dataList = get(productListState);
     return dataList.filter((item) => item.category.includes("jewelery"));
   },
 });
-const electronicsProductList = selector({
+export const electronicsProductList = selector({
   key: "electronicsProductList", // unique ID (with respect to other atoms/selectors)
   get: ({ get }) => {
     const dataList = get(productListState);
