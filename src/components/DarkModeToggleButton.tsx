@@ -30,7 +30,7 @@ const DarkModeToggleButton = () => {
   }, []);
 
   return (
-    <label className="swap swap-rotate">
+    <label className="swap swap-rotate mr-2 sm:mr-4">
       <input type="checkbox" className="js-theme" onClick={() => swapMode()} />
       <svg
         className={

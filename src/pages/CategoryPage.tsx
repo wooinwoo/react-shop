@@ -5,6 +5,7 @@ import {
   electronicsProductList,
 } from "../state/State";
 import ProductList from "../components/ProductList";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 interface dataProps {
   id: number;
@@ -37,7 +38,8 @@ const CategoryPage = ({ keyword }: MyComponentProps) => {
   const sendData: SendData = array[keyword];
   return (
     <>
-      <section className="pt-15 p-10">
+      <section className="pt-4 lg:pt-5 pb-4 lg:pb-8 px-4 xl:px-2 xl:container mx-auto">
+        <Breadcrumbs depth1={"홈"} depth2={keyword} />
         <ProductList
           title={sendData.title}
           dataScroll={false}
