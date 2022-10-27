@@ -12,14 +12,13 @@ import Footer from "./Footer";
 function App() {
   GetProductList();
   return (
-    <>
-      {/* <SideDrawer /> */}
-      <BrowserRouter>
+    <BrowserRouter>
+      <div>
         <Header />
         <section className="pt-16">
           <Routes>
             <Route path="/" element={<MainPage />} />
-            <Route path="/fation" element={<CategoryPage keyword="패션" />} />
+            <Route path="/fashion" element={<CategoryPage keyword="패션" />} />
             <Route
               path="/accessory"
               element={<CategoryPage keyword="액세서리" />}
@@ -33,8 +32,9 @@ function App() {
           </Routes>
         </section>
         <Footer />
-      </BrowserRouter>
-    </>
+      </div>
+      <SideDrawer />
+    </BrowserRouter>
   );
 }
 

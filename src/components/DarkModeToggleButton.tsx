@@ -10,11 +10,11 @@ const swapBtnClass = [
 const DarkModeToggleButton = () => {
   const swapMode = () => {
     if (localStorage.getItem("theme") === "dark") {
-      localStorage.removeItem("theme"); // 다크모드 삭제
-      document.documentElement.classList.remove("dark"); // html class에서 dark클래스 삭제 !
+      localStorage.removeItem("theme");
+      document.documentElement.classList.remove("dark");
       document.documentElement.setAttribute("data-theme", "light");
     } else {
-      document.documentElement.classList.add("dark"); // html의 class에 dark 클래스 추가 !
+      document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
       document.documentElement.setAttribute("data-theme", "dark");
     }
