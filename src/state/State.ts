@@ -39,3 +39,8 @@ export const electronicsProductList = selector({
     return dataList.filter((item) => item.category.includes("electronics"));
   },
 });
+
+export const drawerState = atom({
+  key: "drawerState",
+  default: false,
+});
