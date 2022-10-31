@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import GetProductList from "./api/GetProductList";
+import useCartState from "./hooks/useCartState";
+
 import Header from "./Header";
 import SideDrawer from "./components/SideDrawer";
 import MainPage from "./pages/MainPage";
@@ -11,6 +13,7 @@ import Footer from "./Footer";
 
 function App() {
   GetProductList();
+  useCartState();
   return (
     <BrowserRouter>
       <div>
