@@ -7,15 +7,10 @@ import {
 import ImgCarousel from "../components/ImgCarousel";
 import ProductList from "../components/ProductList";
 
-interface MyComponentProps {
-  data: Array<any>;
-}
-
 const MainPage = () => {
   const clothingList = useRecoilValue(clothingProductList);
   const jeweleryList = useRecoilValue(jeweleryProductList);
   const electronicsList = useRecoilValue(electronicsProductList);
-  console.log(clothingProductList);
   return (
     <>
       <ImgCarousel />

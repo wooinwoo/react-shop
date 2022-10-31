@@ -29,7 +29,6 @@ interface MyComponentProps {
 }
 
 const CategoryPage = ({ keyword }: MyComponentProps) => {
-  console.log(keyword);
   const array: any = {
     패션: { title: "패션", data: useRecoilValue(clothingProductList) },
     액세서리: { title: "액세서리", data: useRecoilValue(jeweleryProductList) },

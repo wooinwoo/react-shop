@@ -25,7 +25,6 @@ const DarkModeToggleButton = () => {
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
       document.documentElement.setAttribute("data-theme", "light");
-      console.log(swapBtnClass);
     }
   }, []);
 
