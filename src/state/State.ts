@@ -44,3 +44,18 @@ export const drawerState = atom({
   key: "drawerState",
   default: false,
 });
+
+export const cartState = atom({
+  key: "cartState",
+  default: [],
+});
+
+export const cartCountState = atom({
+  key: "cartCountState",
+  default: 0,
+});
+
+export const cartTotalPriceState = atom({
+  key: "cartTotalPriceState",
+  default: 0,
+});
