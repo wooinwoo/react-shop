@@ -12,7 +12,7 @@ const categoryLink: Array<Array<string>> = [
 const Header = () => {
   return (
     <>
-      <header className="fixed z-10 w-full navbar shadow-lg bg-white dark:bg-neutral text-neutral-content">
+      <header className="fixed z-40 w-full navbar shadow-lg bg-white dark:bg-neutral text-neutral-content">
         <div className="flex w-full xl:container xl:m-auto">
           <h1 className="shrink-0 items-center flex md:flex flex-1 mx-1 sm:mx-2">
             <DrawerToggle />
