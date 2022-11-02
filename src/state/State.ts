@@ -59,3 +59,8 @@ export const cartTotalPriceState = atom({
   key: "cartTotalPriceState",
   default: 0,
 });
+
+export const checkAllState = atom({
+  key: "checkAllState",
+  default: false,
+});
