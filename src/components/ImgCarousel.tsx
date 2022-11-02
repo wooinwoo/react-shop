@@ -1,5 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
 
 const ImgCarousel = () => {
   return (
@@ -21,7 +22,7 @@ const ImgCarousel = () => {
           <p className="my-2 text-white">
             이제 막 도착한 패션 청바지를 구경해 보세요.
           </p>
-          <a className="btn btn-sm lg:btn-md mt-3" href="/digital">
+          <Link className="btn btn-sm lg:btn-md mt-3" to="/fashion">
             바로가기
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +34,7 @@ const ImgCarousel = () => {
                 d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
       <div>
@@ -47,7 +48,7 @@ const ImgCarousel = () => {
             귀티 뿜뿜!
           </h2>
           <p className="my-2 text-white">다양한 악세사리를 둘러보세요.</p>
-          <a className="btn btn-sm lg:btn-md mt-3" href="/accessory">
+          <Link className="btn btn-sm lg:btn-md mt-3" to="/accessory">
             바로가기
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +60,7 @@ const ImgCarousel = () => {
                 d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -74,7 +75,7 @@ const ImgCarousel = () => {
             신속한 업무처리!
           </h2>
           <p className="my-2 text-white">다양한 디지털 상품을 둘러보세요.</p>
-          <a className="btn btn-sm lg:btn-md mt-3" href="/digital">
+          <Link className="btn btn-sm lg:btn-md mt-3" to="/digital">
             바로가기
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +87,7 @@ const ImgCarousel = () => {
                 d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -103,7 +104,7 @@ const ImgCarousel = () => {
           <p className="my-2 text-white">
             농장 직배송으로 더욱 신선한 식료품을 만나보세요.
           </p>
-          <a className="btn btn-sm lg:btn-md mt-3" href="/digital">
+          <Link className="btn btn-sm lg:btn-md mt-3" to="/404">
             바로가기
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +116,7 @@ const ImgCarousel = () => {
                 d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                 clipRule="evenodd"></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </Carousel>
