@@ -4,7 +4,7 @@ import { productListState, cartState } from "../state/State";
 import Breadcrumbs from "../components/Breadcrumbs";
 import StarRating from "../components/StarRating";
 
-import { CreateCartItem } from "../helpers/CartHelpers";
+import { CreateItem } from "../helpers/CartHelpers";
 
 interface dataProps {
   id: number;
@@ -77,7 +77,7 @@ const ProductDetailPage = () => {
             <div className="card-actions">
               <button
                 className="btn btn-primary"
-                onClick={() => setCart(CreateCartItem(item, cart ))}>
+                onClick={() => setCart(CreateItem(item, cart))}>
                 장바구니에 담기
               </button>
               <Link className="btn btn-outline ml-1" to="/cart">
