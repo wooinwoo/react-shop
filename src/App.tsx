@@ -16,26 +16,21 @@ function App() {
   useCartState();
   return (
     <BrowserRouter>
-      <div>
-        <Header />
-        <section className="pt-16">
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/fashion" element={<CategoryPage keyword="패션" />} />
-            <Route
-              path="/accessory"
-              element={<CategoryPage keyword="액세서리" />}
-            />
-            <Route
-              path="/digital"
-              element={<CategoryPage keyword="디지털" />}
-            />
-            <Route path="/product/:id" element={<ProductDetailPage />} />
-            <Route path="/cart" element={<CartPage />} />
-          </Routes>
-        </section>
-        <Footer />
-      </div>
+      <Header />
+      <section className="pt-16">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/fashion" element={<CategoryPage keyword="패션" />} />
+          <Route
+            path="/accessory"
+            element={<CategoryPage keyword="액세서리" />}
+          />
+          <Route path="/digital" element={<CategoryPage keyword="디지털" />} />
+          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/cart" element={<CartPage />} />
+        </Routes>
+      </section>
+      <Footer />
       <SideDrawer />
     </BrowserRouter>
   );
