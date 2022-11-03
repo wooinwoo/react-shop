@@ -23,15 +23,11 @@ const useCartState = () => {
 
   useEffect(() => {
     const data: any = localStorage.getItem("cart");
-    console.log(data, JSON.parse(data));
-    console.log(data === null);
     setCart(data === null ? [] : JSON.parse(data));
   }, []);
 
   useEffect(() => {
-    console.log(cart);
     localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(localStorage.getItem("cart"));
     let sumCount = 0,
       sumPrice = 0;
     cart.map((item: cart) => (sumCount += item.count));

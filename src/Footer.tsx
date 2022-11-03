@@ -1,11 +1,3 @@
-import DarkModeToggleButton from "./components/DarkModeToggleButton";
-import SearchBar from "./components/SearchBar";
-
-const categoryLink = [
-  ["패션", "/fation"],
-  ["악세서리", "/accessory"],
-  ["디지털", "/digital"],
-];
 const Footer = () => {
   return (
     <footer className="p-10 footer bg-base-200 text-base-content footer-center">

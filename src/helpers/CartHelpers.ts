@@ -42,7 +42,7 @@ export const CreateItem = (item: item, cart: Array<cartItem>) => {
 export const SubItem = (id: number, cart: Array<cartItem>) => {
   let cart_copy = [...cart];
   const index = cart_copy.findIndex((i) => i.id == id);
-  if (cart_copy[index].count !== 1) {
+  if (cart_copy[index].count !== 0) {
     cart_copy[index] = {
       ...cart_copy[index],
       count: cart_copy[index].count - 1,
@@ -56,7 +56,6 @@ export const UserInputItemCount = (
   cart: Array<cartItem>,
   value: string
 ) => {
-  console.log(Number(value));
   let cart_copy = [...cart];
   const index = cart_copy.findIndex((i) => i.id == id);
   let count;
