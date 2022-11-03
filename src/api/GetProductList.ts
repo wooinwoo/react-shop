@@ -8,10 +8,10 @@ const GetProductList = () => {
     method: "GET",
     url: "https://fakestoreapi.com/products",
   })
-    .then((res) => {
+    .then((res: any) => {
       setData(res.data);
     })
-    .catch((error) => alert(`데이터를 불러들이기 실패.\n${error}`));
+    .catch((error: any) => alert(`데이터를 불러들이기 실패.\n${error}`));
 };
 
 export default GetProductList;
