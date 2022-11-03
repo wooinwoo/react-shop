@@ -1,7 +1,45 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { itemState, productListState } from "../state/State";
+
+interface data {
+  id: number;
+  category: string;
+  description: string;
+  image: string;
+  price: number;
+  rating: {
+    rate: number;
+    count: number;
+  };
+  title: string;
+}
 
 const SearchBar = () => {
+  const [searchValue, setSearchValue] = useState("");
   const [searchToggle, setSearchToggle] = useState(false);
+  const [filterData, setFilterData] = useState([]);
+  const productList = useRecoilValue(productListState);
+  const setDetailItemData = useSetRecoilState(itemState);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (searchValue !== "") {
+      let dataList: any = productList.filter((item) =>
+        item.title.includes(searchValue)
+      );
+      setFilterData(dataList);
+    }
+  }, [searchValue]);
+
+  const linkto = (id: number) => {
+    let data: Array<data> = productList.filter((item) => item.id === id);
+    setDetailItemData(data[0]);
+    navigate("/product/" + id);
+  };
+
   return (
     <div className="dropdown">
       <button
@@ -28,9 +66,22 @@ const SearchBar = () => {
             ? "fixed left-0 top-4 -z-10 opacity-100 sm:opacity-100 sm:static sm:flex w-full input input-ghost focus:outline-0 rounded-none sm:rounded bg-gray-300 dark:bg-gray-600 !text-gray-800 dark:!text-white sm:transform-none transition-all js-searchInput translate-y-full"
             : "fixed left-0 top-4 -z-10 opacity-0 sm:opacity-100 sm:static sm:flex w-full input input-ghost focus:outline-0 rounded-none sm:rounded bg-gray-300 dark:bg-gray-600 !text-gray-800 dark:!text-white sm:transform-none transition-all js-searchInput"
         }
-        // value=""
+        onChange={(e) => setSearchValue(e.target.value)}
+        value={searchValue}
       />
-      <ul className="!fixed left-0 sm:!absolute sm:top-14 menu dropdown-content w-full sm:w-64 max-h-96 shadow text-base-content overflow-y-auto bg-white dark:bg-gray-600"></ul>
+      <ul className="!fixed left-0 sm:!absolute sm:top-14 menu dropdown-content w-full sm:w-64 max-h-96 shadow text-base-content overflow-y-auto bg-white dark:bg-gray-600">
+        {filterData.map((item: data) => (
+          <li>
+            <button
+              className="text-left js-searchedItem"
+              onClick={() => linkto(item.id)}>
+              <span className="text-gray-600 dark:text-white line-clamp-2">
+                {item.title}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

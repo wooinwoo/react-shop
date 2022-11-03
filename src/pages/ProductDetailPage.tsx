@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { productListState, cartState } from "../state/State";
+import { productListState, cartState, itemState } from "../state/State";
 import Breadcrumbs from "../components/Breadcrumbs";
 import StarRating from "../components/StarRating";
 
 import { CreateItem } from "../helpers/CartHelpers";
+import { useEffect } from "react";
 
 interface dataProps {
   id: number;
@@ -23,24 +24,31 @@ const ProductDetailPage = () => {
   const url = window.location.href.split("/");
   const dataList: Array<dataProps> = useRecoilValue(productListState);
   const [cart, setCart]: any = useRecoilState(cartState);
+  const [item, setItem] = useRecoilState(itemState);
+  const productList = useRecoilValue(productListState);
 
-  const filterData = dataList.filter(
-    (d) => String(d.id) === url[url.length - 1]
-  )[0];
-  const item: dataProps = filterData
-    ? filterData
-    : {
-        id: 0,
-        category: "initial",
-        description: "",
-        image: "",
-        price: 0,
-        rating: {
-          rate: 0,
-          count: 0,
-        },
-        title: "",
-      };
+  useEffect(() => {
+    const filterData = dataList.filter(
+      (d) => String(d.id) === url[url.length - 1]
+    )[0];
+    const itemData: dataProps = filterData
+      ? filterData
+      : {
+          id: 0,
+          category: "initial",
+          description: "",
+          image: "",
+          price: 0,
+          rating: {
+            rate: 0,
+            count: 0,
+          },
+          title: "",
+        };
+    setItem(itemData);
+  }, [productList]);
+
+
   const category: any = {
     initial: "1",
     "men's clothing": "패션",
