@@ -18,6 +18,19 @@ interface cartItem {
   checked: boolean;
 }
 
+interface data {
+  id: number;
+  category: string;
+  description: string;
+  image: string;
+  price: number;
+  rating: {
+    rate: number;
+    count: number;
+  };
+  title: string;
+}
+
 const CartTable = () => {
   const [cart, setCart] = useRecoilState(cartState);
   const [checkAll, setCheckAll] = useRecoilState(checkAllState);
@@ -35,6 +48,10 @@ const CartTable = () => {
         ])
     );
     setCart(cartData);
+  };
+
+  const cartUpdate = (cart: any) => {
+    setCart(cart);
   };
 
   return (
@@ -60,7 +77,9 @@ const CartTable = () => {
             <th className="sticky top-0"></th>
             <th className="sticky top-0"></th>
             <th className="sticky top-0">
-              <button onClick={() => setCart(DelItem(cart))}>선택삭제</button>
+              <button onClick={() => cartUpdate(DelItem(cart))}>
+                선택삭제
+              </button>
             </th>
           </tr>
         </thead>
@@ -73,7 +92,7 @@ const CartTable = () => {
                     type="checkbox"
                     className="checkbox"
                     checked={item.checked}
-                    onClick={() => setCart(OnCheckItem(item.id, cart))}
+                    onClick={() => cartUpdate(OnCheckItem(item.id, cart))}
                   />
                 </label>
               </th>
@@ -103,19 +122,21 @@ const CartTable = () => {
               <td>
                 <button
                   className="btn h-5"
-                  onClick={() => setCart(SubItem(item.id, cart))}>
+                  onClick={() => cartUpdate(SubItem(item.id, cart))}>
                   -
                 </button>
                 <input
                   className="input input-bordered text-center w-10 p-0"
                   value={item.count}
                   onChange={(e) =>
-                    setCart(UserInputItemCount(item.id, cart, e.target.value))
+                    cartUpdate(
+                      UserInputItemCount(item.id, cart, e.target.value)
+                    )
                   }
                 />
                 <button
                   className="btn h-5"
-                  onClick={() => setCart(AddItem(item.id, cart))}>
+                  onClick={() => cartUpdate(AddItem(item.id, cart))}>
                   +
                 </button>
               </td>
