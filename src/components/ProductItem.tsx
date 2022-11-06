@@ -16,7 +16,7 @@ interface MyComponentProps {
 }
 
 const ProductItem = ({ item }: MyComponentProps) => {
-  const clickUrl: string = `/product/${item.id}`;
+  const clickUrl: string = `/product/=${item.id}`;
   return (
     <>
       <Link

@@ -26,7 +26,7 @@ function App() {
             element={<CategoryPage keyword="액세서리" />}
           />
           <Route path="/digital" element={<CategoryPage keyword="디지털" />} />
-          <Route path="/product/:id" element={<ProductDetailPage />} />
+          <Route path="/product/:=id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
         </Routes>
       </section>
