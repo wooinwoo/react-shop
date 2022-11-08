@@ -2,6 +2,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
 
+import fashionImg from "../assets/img_shop_fashion.jpeg";
+import accessoryImg from "../assets/img_shop_accessory.jpeg";
+import digitalImg from "../assets/img_shop_digital.jpeg";
+import groceryImg from "../assets/img_shop_grocery.jpeg";
+
 const ImgCarousel = () => {
   return (
     <Carousel
@@ -10,11 +15,7 @@ const ImgCarousel = () => {
       showThumbs={false}
       showStatus={false}>
       <div>
-        <img
-          alt=""
-          src="src/assets/img_shop_fashion.jpeg"
-          className="max-h-[80vh]"
-        />
+        <img alt="청바지 이미지" src={fashionImg} className="max-h-[80vh]" />
         <div className="carousel-description absolute left-auto right-auto bottom-1/3 mb-10 text-left w-full lg:container px-4 md:px-10">
           <h2 className="text-2xl lg:text-4xl font-bold text-white">
             물빠진 청바지!
@@ -40,7 +41,7 @@ const ImgCarousel = () => {
       <div>
         <img
           alt="악세사리 이미지"
-          src="src/assets/img_shop_accessory.jpeg"
+          src={accessoryImg}
           className="max-h-[80vh]"
         />
         <div className="carousel-description absolute left-auto right-auto bottom-1/3 mb-10 text-left w-full lg:container px-4 md:px-10">
@@ -66,8 +67,8 @@ const ImgCarousel = () => {
 
       <div>
         <img
-          alt=""
-          src="src/assets/img_shop_digital.jpeg"
+          alt="사람이 노트북 앞에서 폰을 들고 있는 이미지"
+          src={digitalImg}
           className="max-h-[80vh]"
         />
         <div className="carousel-description absolute left-auto right-auto bottom-1/3 mb-10 text-left w-full lg:container px-4 md:px-10">
@@ -92,11 +93,7 @@ const ImgCarousel = () => {
       </div>
 
       <div>
-        <img
-          alt=""
-          src="src/assets/img_shop_grocery.jpeg"
-          className="max-h-[80vh]"
-        />
+        <img alt="식품 이미지" src={groceryImg} className="max-h-[80vh]" />
         <div className="carousel-description absolute left-auto right-auto bottom-1/3 mb-10 text-left w-full lg:container px-4 md:px-10">
           <h2 className="text-2xl lg:text-4xl font-bold text-white">
             신선한 식품!
