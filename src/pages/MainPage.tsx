@@ -15,16 +15,23 @@ const MainPage = () => {
     <>
       <ImgCarousel />
       <section className="pt-15 p-10">
-        <ProductList title="패션" dataScroll={true} dataList={clothingList} />
+        <ProductList
+          title="패션"
+          dataScroll={true}
+          dataList={clothingList}
+          dataLimit={4}
+        />
         <ProductList
           title="액세서리"
           dataScroll={true}
           dataList={jeweleryList}
+          dataLimit={4}
         />
         <ProductList
           title="디지털"
           dataScroll={true}
           dataList={electronicsList}
+          dataLimit={4}
         />
       </section>
     </>
