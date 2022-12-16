@@ -1,7 +1,5 @@
 <div align="center" >
 <h1> React Shop </h1>
-
-<<<<<<< HEAD
 <div> React를 이용한 쇼핑몰입니다. </div>
 <h3> Description of Project </h3>
 <h3> 사이트 도메인 </h3>
@@ -11,23 +9,13 @@
 
 <h2><b> Preview </b></h2><br/>
 <h3><b> 메인 페이지 </b></h3>
-<img src="README_imges/메인페이지.png" alt="main" />
+<img src="README_imges/메인페이지.png" alt="메인 페이지" />
 <br/><br/><br/>
-<h3><b> 비교 페이지 </b></h3>
-<img src="./LawsCloud비교.PNG" alt="compareCloud" />
+<h3><b> 상품 페이지 </b></h3>
+<img src="README_imges/상품페이지.png" alt="상품 페이지" />
 <br/><br/><br/>
-<h3><b> 법률안 페이지 </b></h3>
-<img src="./LawsCloud법률안리스트.PNG" alt="billsList" />
+<h3><b> 상품 상세페이지 </b></h3>
+<img src="README_imges/상품상세페이지.png" alt="상품 상세페이지" />
 <br/><br/><br/>
-<h3><b> 법률안 상세페이지 </b></h3>
-<img src="./LawsCloud상세페이지모달.PNG" alt="billDetail "/>
-=======
-<div> 2000년대 이후 법률 발의안들의 키워드들을 워드 클라우드로 보여주는 웹 어플리케이션입니다. </div>
-<h3> Description of Project </h3>
-<h3> 사이트 도메인 </h3>
-<a href="https://react-shop-9jrt.vercel.app/" target="_blank">react-shop-9jrt.vercel.app</a>
-<h4> Why? </h4>
-각 연도별 국회의원들의 관심사에 대한 키워드를 한눈에 파악할 수 있음
-
-<br/>
->>>>>>> cd8f00f581926af13a877bad0b2994843ce11a72
+<h3><b> 장바구니 페이지 </b></h3>
+<img src="README_imges/장바구니페이지.png" alt="장바구니 페이지"/>
