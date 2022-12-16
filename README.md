@@ -19,3 +19,9 @@
 <br/><br/><br/>
 <h3><b> 장바구니 페이지 </b></h3>
 <img src="README_imges/장바구니페이지.png" alt="장바구니 페이지"/>
+
+### Tech Stacks
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tailwind CSS-06B6D4?style=flat&logo=Tailwind CSS&logoColor=white"/>
+<img src="https://img.shields.io/badge/Recoil-512BD4?style=flat&logo=Recoil&logoColor=white"/>
