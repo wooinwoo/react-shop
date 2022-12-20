@@ -43,6 +43,7 @@ const CategoryPage = ({ keyword }: MyComponentProps) => {
           title={sendData.title}
           dataScroll={false}
           dataList={sendData.data}
+          dataLimit={sendData.data.length}
         />
       </section>
     </>

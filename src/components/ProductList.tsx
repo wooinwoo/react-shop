@@ -1,5 +1,7 @@
 import ProductItem from "./ProductItem";
 
+
+
 interface dataProps {
   id: number;
   category: string;
@@ -24,7 +26,7 @@ const ProductList = ({
   title,
   dataScroll,
   dataList,
-  dataLimit = dataList.length,
+  dataLimit
 }: MyComponentProps) => {
   return (
     <>
